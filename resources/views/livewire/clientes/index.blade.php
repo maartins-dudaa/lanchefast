@@ -77,6 +77,7 @@
                         @endforelse
                     </tbody>
                 </table>
+                <livewire:clientes.edit>
             </div>
             <div class="mb-3">
                 {{ $clientes->links() }}

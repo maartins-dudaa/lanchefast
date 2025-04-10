@@ -11,7 +11,7 @@ Route::prefix('produtos')->group(function () {
     Route::get('/create', ProdutoCreate::class)->name('produtos.create');
     Route::get('/{produto}', ProdutoShow::class)->name('produtos.show');
     Route::get('/{produto}/edit', ProdutoEdit::class)->name('produtos.edit');
-
+});
   Route::prefix('clientes')->group(function(){
     Route::get('/', \App\Livewire\Clientes\Index::class)->name('clientes.index');
     Route::get('/create', \App\Livewire\Clientes\Create::class)->name('clientes.create');

@@ -14,7 +14,7 @@ class Cliente extends Model
         'telefone',
         'cpf',
         'email',
-        'senha'
+        'password'
     ];
 
     // o hidden serve para ocultar determinados campos 
@@ -23,4 +23,11 @@ class Cliente extends Model
         'senha',
         'remember_token'
     ];
+
+    public function edit(Cliente $cliente)
+    {
+        $this->cliente = $cliente;
+        $this->isEditMode = true;
+        $this->dispatchBrowserEvent('openModal');
+    }
 }
