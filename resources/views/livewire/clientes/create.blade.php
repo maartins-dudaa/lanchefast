@@ -1,63 +1,49 @@
-<div class="mt-5">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background: linear-gradient(135deg, #fff3e0, #ffcc80); font-family: 'Poppins', sans-serif;">
+    <div class="card shadow-lg" style="width: 100%; max-width: 480px; border-radius: 25px; padding: 30px; background-color: #fff8e1; border: 3px solid #ff7043;">
 
-    @if(session()->has('success'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{session('success')}}
-        <button type="button" class="btn-close"
-        data-bs dismiss="alert" aria-label="Close"></button>
-    </div>
-@endif
-    <div class="container" >
-    <div class="container">
-        <div class="card" >
-            <h5 class="card-header" style="background-color:whitesmoke" >Cadastro de Clientes</h5>
-            <div class="card-body">
-                <form wire:submit.prevent="store">
-                    <div class="mb-3">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" 
-                        placeholder="Ex: Eduarda" wire:model.deferc="nome">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="endereco" class="form-label">Endereco</label>
-                        <input type="text" class="form-control" id="endereco" name="endereco" 
-                        placeholder="Ex: Rua X, 12-6" wire:model.defer="endereco">
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="telefone" class="form-label">Telefone</label>
-                        <input type="text" class="form-control" id="telefone" name="telefone" 
-                        placeholder="Ex: (00) 00000-0000" wire:model.defer="telefone">
-                        
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="form-control" id="nome" name="cpf" 
-                        placeholder="Ex: 000000000-00" wire:model.defer="cpf">
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" 
-                        placeholder="Ex: nome@gmail.com" wire:model.defer="email">
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="password" name="password" 
-                         wire:model.defer="password">
-                    </div>
-    
-                    
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-success">Cadastrar</button>
-                    </div>
-    
-                </form>
-            </div>
+        <div class="text-center mb-4">
+            <img src="https://i.imgur.com/Wv8VqHf.png" alt="LancheFast" style="width: 100px;">
+            <h2 style="color: #d84315; font-weight: 800;">LancheFast</h2>
+            <p style="color: #5d4037; font-weight: 500;">Cadastro de Clientes</p>
         </div>
+
+        @if(session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        <form wire:submit.prevent="store">
+            <div class="mb-3">
+                <input type="text" class="form-control rounded-pill p-3" id="nome" name="nome" placeholder="🍔 Nome completo" wire:model.defer="nome">
+            </div>
+
+            <div class="mb-3">
+                <input type="text" class="form-control rounded-pill p-3" id="endereco" name="endereco" placeholder="📍 Endereço" wire:model.defer="endereco">
+            </div>
+
+            <div class="mb-3">
+                <input type="text" class="form-control rounded-pill p-3" id="telefone" name="telefone" placeholder="📞 Telefone" wire:model.defer="telefone">
+            </div>
+
+            <div class="mb-3">
+                <input type="text" class="form-control rounded-pill p-3" id="cpf" name="cpf" placeholder="🧾 CPF" wire:model.defer="cpf">
+            </div>
+
+            <div class="mb-3">
+                <input type="email" class="form-control rounded-pill p-3" id="email" name="email" placeholder="📧 Email" wire:model.defer="email">
+            </div>
+
+            <div class="mb-4">
+                <input type="password" class="form-control rounded-pill p-3" id="password" name="password" placeholder="🔒 Senha" wire:model.defer="password">
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-warning rounded-pill fw-bold p-3" style="background-color: #ff7043; border: none; color: white; font-size: 18px;">
+                    🍟 Cadastrar
+                </button>
+            </div>
+        </form>
     </div>
-   
 </div>

@@ -22,7 +22,7 @@ class ClienteSeeder extends Seeder
             'telefone' => '18 996306324',
             'cpf' => '1278956412',
             'email' => 'dudaTeste@gmail.com',
-            'senha' => bcrypt('123456')
+            'password' => bcrypt('123456')
         ]);
 
         Cliente::create([
@@ -31,7 +31,7 @@ class ClienteSeeder extends Seeder
             'telefone' => '40027822',
             'cpf' => '12347898940',
             'email' => 'maluTeste@gmail.com',
-            'senha' => bcrypt('123456')
+            'password' => bcrypt('123456')
         ]);
 
         Cliente::create([
@@ -40,7 +40,7 @@ class ClienteSeeder extends Seeder
             'telefone' => '407896522',
             'cpf' => '123777854990',
             'email' => 'clara@gmail.com',
-            'senha' => bcrypt('123456')
+            'password' => bcrypt('123456')
         ]);
 
         
